@@ -16,7 +16,7 @@ int stub(int thePrime);
 
 int main()
 {
-	PrimeNumber a(23231412);
+	PrimeNumber a(93720);
 	cout << a.getPrime() << endl;
 	a++;
 	cout << a.getPrime() << endl;
@@ -42,21 +42,3 @@ PrimeNumber PrimeNumber::operator++(int ignoreMe)
 	return PrimeNumber(thePrime);
 }
 
-int stub(int thePrime)
-{
-	bool foundNext = false;
-	while (!foundNext)
-	{
-		thePrime++;
-		bool isPrime = true;
-		for (int i=2;i<thePrime;i++)
-		{
-			if (thePrime%i == 0)
-			{
-				isPrime = false;
-			}
-		}
-		if (isPrime) {foundNext = true;}
-	}
-	return thePrime;
-}
